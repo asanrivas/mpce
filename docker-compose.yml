@@ -2,16 +2,24 @@ version: '3.4'
 
 services:
   bds:
-    image: itzg/minecraft-bedrock-server
+    image: itzg/minecraft-bedrock-server:master
     environment:
       EULA: "TRUE"
+      VERSION: LATEST
       GAMEMODE: survival
       DIFFICULTY: normal
+      SERVER_NAME: "Server Asan Amy ♥️"
       LEVEL_NAME: amy-archipelago
+      VIEW_DISTANCE: 15
+      OPS: "2533274807543178,2535421548369847,2535415091946325"
     ports:
       - 19132:19132/udp
     volumes:
+      - bds:/data
       - ./worlds:/data/worlds
     stdin_open: true
+    restart: always
     tty: true
 
+volumes:
+  bds: {}
