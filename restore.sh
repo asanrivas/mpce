@@ -2,7 +2,12 @@
 
 docker-compose down
 
-newest=`ls backup/amy* -t | head -1`
+if [[ "$1" != "" ]]; then
+    newest="backup/$1"
+else
+    newest=`ls backup/amy* -t | head -1`
+fi
+
 echo "Latest backup is: $newest"
 cd worlds
 rm -rf amy-archipelago/

@@ -8,7 +8,7 @@ services:
       VERSION: LATEST
       GAMEMODE: survival
       DIFFICULTY: normal
-      SERVER_NAME: "Server Asan Amy ♥️"
+      SERVER_NAME: "Radical Dreamer Archipelago"
       LEVEL_NAME: amy-archipelago
       VIEW_DISTANCE: 15
       OPS: "2533274807543178,2535421548369847,2535415091946325"
